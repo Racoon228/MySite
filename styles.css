@@ -39,3 +39,19 @@ footer {
     color: white;
     padding: 10px 0;
 }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку */
+    justify-content: space-around; /* Выравнивание элементов по горизонтали */
+}
+
+.gallery-item {
+    margin: 10px; /* Отступы между изображениями */
+    text-align: center; /* Центрирование подписи */
+}
+
+img {
+    width: 300px; /* Ширина изображений */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
