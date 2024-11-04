@@ -1,7 +1,8 @@
+/* Общие стили */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -32,11 +33,13 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Основной контент */
 main {
     flex: 1; 
     padding: 20px;
 }
 
+/* Подвал */
 footer {
     text-align: center;
     background-color: #4CAF50;
@@ -44,6 +47,7 @@ footer {
     padding: 10px 0;
 }
 
+/* Галерея */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -59,4 +63,96 @@ img {
     width: 300px;
     height: 200px;
     object-fit: cover;
+}
+
+/* Кнопки */
+button {
+    background-color: #4CAF50; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы */
+    cursor: pointer; /* Указатель курсора при наведении */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+button:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column; /* Вертикальная ориентация элементов формы */
+}
+
+form input,
+form textarea {
+    margin-bottom: 10px; /* Отступ снизу */
+    padding: 10px; /* Внутренний отступ */
+    border-radius: 5px; /* Закругленные углы */
+    border: 1px solid #ccc; /* Рамка */
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50; /* Цвет кнопки отправки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
+
+.thumbnail {
+    width: 200px; /* Размер миниатюры */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+#modal__window{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: opacity 5s ease;
+
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    z-index: 1000; /* На переднем плане */
+    width: 100vw;
+    height: 100vh;
+}
+
+#popup-img{
+    position: absolute;
+    max-width: 100%;
+    top: 35%;
+    left: 40%;
+    border: 5px solid #45a049;
+    text-align: center;
+    opacity: 1;
+    box-shadow: 0 0 50px rgba(250, 250, 15, 0.5);
+    transform: scale(2);
+    transition: opacity 3s ease, transform 3s ease ;
+}
+#modal__window p{
+    position: absolute;
+    bottom: 20vh;
+    left: 25vw;
+    font-size: 5rem; 
+    color: white; 
+    width: 80%;  
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }

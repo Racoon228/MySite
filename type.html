@@ -33,7 +33,11 @@
         <body>
             <section id="HT">
                 <h1>Тяжелые танки</h1>
-                <img src="https://wiki.wgcdn.co/images/1/1f/Wot-heavytank.png" width="300" class="img">
+                <!--<img src="https://wiki.wgcdn.co/images/1/1f/Wot-heavytank.png" width="300" class="img">-->
+                <img class="galery-item" src="https://wiki.wgcdn.co/images/1/1f/Wot-heavytank.png" alt="foto1" onclick="openPopup('https://wiki.wgcdn.co/images/1/1f/Wot-heavytank.png')">
+                    <div id="modal__window"  onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image"><br>
+                    </div>
                 <p><b>Суть тяжелых танков</b></p>
                 <p>
                     Тяжёлые танки ведут бой на близкой дистанции: благодаря толстой броне и мощному орудию 
@@ -57,7 +61,11 @@
             </section>
             <section id="MT">
                 <h1>Средние танки</h1>
-                <img src="https://wiki.wgcdn.co/images/2/26/Wot-mediumtank.png" width="300" class="img">
+                <!--<img src="https://wiki.wgcdn.co/images/2/26/Wot-mediumtank.png" width="300" class="img">-->
+                <img class="galery-item" src="https://wiki.wgcdn.co/images/2/26/Wot-mediumtank.png" alt="foto1" onclick="openPopup('https://wiki.wgcdn.co/images/2/26/Wot-mediumtank.png')">
+                    <div id="modal__window"  onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image"><br>
+                    </div>
                 <p><b>Суть средних танков</b></p>
                 <p>
                     Функция средних танков в бою напрямую зависит от характеристик конкретной машины 
@@ -77,7 +85,11 @@
             </section>
             <section id="LT">
                 <h1>Легкие танки</h1>
-                <img src="https://wiki.wgcdn.co/images/e/ec/Wot-lighttank.png" width="300" class="img">
+                <!--<img src="https://wiki.wgcdn.co/images/e/ec/Wot-lighttank.png" width="300" class="img">-->
+                <img class="galery-item" src="https://wiki.wgcdn.co/images/e/ec/Wot-lighttank.png" alt="foto1" onclick="openPopup('https://wiki.wgcdn.co/images/e/ec/Wot-lighttank.png')">
+                    <div id="modal__window"  onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image"><br>
+                    </div>
                 <p><b>Суть легких танков</b></p>
                 <p>
                     Лёгкие танки обладают слабой бронёй, но хорошими показателям обзора и маскировки. 
@@ -93,7 +105,11 @@
             </section>
             <section id="SPG">
                 <h1>ПТ-САУ</h1>
-                <img src="https://wiki.wgcdn.co/images/2/22/Wot-at-spg.png" width="300" class="img">
+                <!--<img src="https://wiki.wgcdn.co/images/2/22/Wot-at-spg.png" width="300" class="img">-->
+                <img class="galery-item" src="https://wiki.wgcdn.co/images/2/22/Wot-at-spg.png" alt="foto1" onclick="openPopup('https://wiki.wgcdn.co/images/2/22/Wot-at-spg.png')">
+                    <div id="modal__window"  onclick="closePopup()">
+                            <img id="popup-img" src="" alt="Popup Image"><br>
+                    </div>
                 <p><b>Суть ПТ-САУ</b></p>
                 <p>
                     За огневую поддержку союзников отвечают ПТ-САУ со средней бронезащитой. ПТ-САУ с 
@@ -113,5 +129,12 @@
     <footer>
         <p>© 2024 Танковедение. Все права защищены.</p>
     </footer>
+
+    <script src="button.js"></script>
+    <script>
+        // Вызываем функцию для создания кнопки "Наверх"
+        createScrollToTopButton();
+    </script>
+    <script src="img.js"></script>
 </body>
 </html>
