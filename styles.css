@@ -68,45 +68,45 @@ HEAD
 
 /* Кнопки */
 button {
-    background-color: #4CAF50; /* Цвет кнопки */
-    color: white; /* Цвет текста */
-    border: none; /* Убираем рамку */
-    padding: 10px 20px; /* Отступы */
-    cursor: pointer; /* Указатель курсора при наведении */
-    border-radius: 5px; /* Закругленные углы */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049; /* Цвет кнопки при наведении */
+    background-color: #45a049;
 }
 
 /* Формы */
 form {
     display: flex;
-    flex-direction: column; /* Вертикальная ориентация элементов формы */
+    flex-direction: column;
 }
 
 form input,
 form textarea {
-    margin-bottom: 10px; /* Отступ снизу */
-    padding: 10px; /* Внутренний отступ */
-    border-radius: 5px; /* Закругленные углы */
-    border: 1px solid #ccc; /* Рамка */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 form input[type="submit"] {
-    background-color: #4CAF50; /* Цвет кнопки отправки */
-    color: white; /* Цвет текста */
-    border: none; /* Убираем рамку */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049; /* Цвет кнопки при наведении */
+    background-color: #45a049;
 }
 
 .thumbnail {
-    width: 200px; /* Размер миниатюры */
-    cursor: pointer; /* Указатель при наведении */
+    width: 200px;
+    cursor: pointer;
 }
 
 #modal__window{
@@ -114,16 +114,16 @@ form input[type="submit"]:hover {
     opacity: 1;
     transition: opacity 5s ease;
 
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
-    z-index: 1000; /* На переднем плане */
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
     width: 100vw;
     height: 100vh;
 }
@@ -156,4 +156,49 @@ form input[type="submit"]:hover {
     color: white;
     font-size: 30px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .navigation {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    }
 }
