@@ -177,4 +177,12 @@ form input[type="submit"]:hover {
     #modal__window {
         pointer-events: none;
     }
+
+    #modal__window p {
+        pointer-events: none;
+    }
+
+    #popup-img {
+        pointer-events: none;
+    }
 }
