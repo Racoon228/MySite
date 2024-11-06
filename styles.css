@@ -62,9 +62,8 @@ footer {
 img {
     width: 300px;
     height: 200px;
-    object-fit: cover;
+    object-fit: cover; /* Сохраняет пропорции изображения */
 }
-HEAD
 
 /* Кнопки */
 button {
@@ -73,132 +72,114 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 5px; /* Закругление углов */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Цвет при наведении */
 }
 
 /* Формы */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Вертикальное выравнивание элементов формы */
 }
 
 form input,
 form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Отступ между полями */
+    padding: 10px; /* Внутренний отступ */
+    border-radius: 5px; /* Закругление углов */
+    border: 1px solid #ccc; /* Граница поля */
 }
 
 form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    background-color: #4CAF50; /* Цвет кнопки отправки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Без границы */
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Цвет при наведении на кнопку отправки */
 }
 
+/* Миниатюры изображений */
 .thumbnail {
-    width: 200px;
-    cursor: pointer;
+    width: 200px; /* Ширина миниатюры */
+    cursor: pointer; /* Указатель при наведении */
 }
 
-#modal__window{
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
-    opacity: 1;
-    transition: opacity 5s ease;
+/* Модальное окно */
+#modal__window {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); /* Тень модального окна */
+    opacity: 1; /* Полная непрозрачность */
+    transition: opacity 5s ease; /* Плавный переход для непрозрачности */
 
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    width: 100vw;
-    height: 100vh;
+    display: none; /* Изначально скрыто */
+    position: fixed; /* Фиксированное позиционирование */
+    top: 0; 
+    left: 0; 
+    width: 100vw; /* Ширина на весь экран */
+    height: 100vh; /* Высота на весь экран */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+    z-index: 1000; /* Поверх других элементов */
 }
 
-#popup-img{
-    position: absolute;
-    max-width: 100%;
-    top: 35%;
-    left: 40%;
-    border: 5px solid #45a049;
-    text-align: center;
-    opacity: 1;
-    box-shadow: 0 0 50px rgba(250, 250, 15, 0.5);
-    transform: scale(2);
-    transition: opacity 3s ease, transform 3s ease ;
+#popup-img {
+    position: absolute; 
+    max-width: 100%; 
+    top: 35%; 
+    left: 40%; 
+    border: 5px solid #45a049; 
+    text-align: center; 
+    opacity: 1; 
+    box-shadow: 0 0 50px rgba(250, 250, 15, 0.5); 
+    transform: scale(2); 
+    transition: opacity 3s ease, transform 3s ease; 
 }
-#modal__window p{
-    position: absolute;
-    bottom: 20vh;
-    left: 25vw;
+
+#modal__window p {
+    position: absolute; 
+    bottom: 20vh; 
+    left: 25vw; 
     font-size: 5rem; 
     color: white; 
     width: 80%;  
 }
 
 .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+    color: white; 
+    font-size: 30px; 
+    cursor: pointer; 
 }
 
-@media only screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
     }
-    
-    .container {
-        padding: 10px;
-    }
-    
-    .navigation {
-        display: block;
-    }
-}
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    body {
-        font-size: 16px;
+    nav ul {
+        flex-direction: column; /* Вертикальное расположение навигации */
+        align-items: center; /* Центрируем элементы */
     }
-    
-    .container {
-        padding: 20px;
-    }
-    
-    .navigation {
-        display: flex;
-        justify-content: space-around;
-    }
-}
 
-@media only screen and (min-width: 1025px) {
-    body {
-        font-size: 18px;
+    .gallery {
+        flex-direction: column; /* Изменяем направление галереи на вертикальное */
+        align-items: center; /* Центрируем элементы галереи */
     }
-    
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
+
+    img {
+        width: 100%; /* Изображения занимают всю ширину экрана */
+        height: auto; /* Сохраняем пропорции */
     }
-    
-    .navigation {
-        display: flex;
-        justify-content: space-between;
+
+    button {
+        width: 100%; /* Кнопки занимают всю ширину */
+        padding: 15px; /* Увеличиваем отступы для удобства на мобильных */
     }
 }
