@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
     display: flex;
     flex-direction: column;
@@ -24,7 +23,7 @@ nav ul {
 }
 
 nav ul li {
-    display: inline; /* Измените на 'block' для вертикального расположения на мобильных */
+    display: inline;
     margin: 0 15px;
 }
 
@@ -33,13 +32,11 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Основной контент */
 main {
     flex: 1; 
     padding: 20px;
 }
 
-/* Подвал */
 footer {
     text-align: center;
     background-color: #4CAF50;
@@ -47,7 +44,6 @@ footer {
     padding: 10px 0;
 }
 
-/* Галерея */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +58,7 @@ footer {
 img {
     width: 300px;
     height: 200px;
-    object-fit: cover; /* Сохраняет пропорции изображения */
+    object-fit: cover;
 }
 
 /* Кнопки */
@@ -72,59 +68,56 @@ button {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px; /* Закругление углов */
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #45a049; /* Цвет при наведении */
+    background-color: #45a049;
 }
 
-/* Формы */
 form {
     display: flex;
-    flex-direction: column; /* Вертикальное выравнивание элементов формы */
+    flex-direction: column;
 }
 
 form input,
 form textarea {
-    margin-bottom: 10px; /* Отступ между полями */
-    padding: 10px; /* Внутренний отступ */
-    border-radius: 5px; /* Закругление углов */
-    border: 1px solid #ccc; /* Граница поля */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 form input[type="submit"] {
-    background-color: #4CAF50; /* Цвет кнопки отправки */
-    color: white; /* Цвет текста на кнопке */
-    border: none; /* Без границы */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049; /* Цвет при наведении на кнопку отправки */
+    background-color: #45a049;
 }
 
-/* Миниатюры изображений */
 .thumbnail {
-    width: 200px; /* Ширина миниатюры */
-    cursor: pointer; /* Указатель при наведении */
+    width: 200px;
+    cursor: pointer;
 }
 
-/* Модальное окно */
 #modal__window {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7); /* Тень модального окна */
-    opacity: 1; /* Полная непрозрачность */
-    transition: opacity 5s ease; /* Плавный переход для непрозрачности */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: opacity 5s ease;
 
-    display: none; /* Изначально скрыто */
-    position: fixed; /* Фиксированное позиционирование */
+    display: none;
+    position: fixed;
     top: 0; 
     left: 0; 
-    width: 100vw; /* Ширина на весь экран */
-    height: 100vh; /* Высота на весь экран */
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
-    justify-content: center; /* Центрирование содержимого по горизонтали */
-    align-items: center; /* Центрирование содержимого по вертикали */
-    z-index: 1000; /* Поверх других элементов */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 #popup-img {
@@ -160,29 +153,17 @@ form input[type="submit"]:hover {
 
 @media (max-width: 600px) {
     nav ul {
-        display: flex; /* Убедитесь, что список отображается как flex-контейнер */
-        flex-direction: column; /* Вертикальное расположение навигации */
-        align-items: center; /* Центрируем элементы */
-        width: 100%; /* Занимает всю ширину экрана */
-        padding-left: 0; /* Убираем отступ слева для списка */
-        margin-bottom: 10px; /* Отступ снизу для разделения с другими элементами */
-        background-color: #4CAF50; /* Фон меню на мобильных устройствах */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 10px;
+        background-color: #4CAF50;
     }
     
     nav ul li {
-        display: block; /* Изменяем на block для вертикального расположения элементов списка */
-        margin-bottom: 10px; /* Отступ между элементами списка */
-    }
-
-    #modal__window {
-        pointer-events: none;
-    }
-
-    #modal__window p {
-        pointer-events: none;
-    }
-
-    #popup-img {
-        pointer-events: none;
+        display: block;
+        margin-bottom: 10px;
     }
 }
