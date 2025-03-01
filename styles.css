@@ -80,8 +80,10 @@ form {
     flex-direction: column;
 }
 
+/* Стили для формы обратной связи */
 form input,
-form textarea {
+form textarea,
+form select {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -151,6 +153,7 @@ form input[type="submit"]:hover {
     cursor: pointer; 
 }
 
+/* Адаптивные стили */
 @media (max-width: 600px) {
     nav ul {
         display: flex;
@@ -165,5 +168,17 @@ form input[type="submit"]:hover {
     nav ul li {
         display: block;
         margin-bottom: 10px;
+    }
+
+    /* Стили для формы на мобильных устройствах */
+    form input,
+    form textarea,
+    form select {
+        width: calc(100% - 20px); /* Учитываем отступы */
+        box-sizing: border-box; /* Учитываем отступы в ширине */
+        margin-bottom: 15px; /* Увеличиваем отступ между полями */
+        padding-left: 15px; /* Увеличиваем внутренний отступ */
+        padding-right: 15px; /* Увеличиваем внутренний отступ */
+        font-size: 16px; /* Увеличиваем шрифт для удобства ввода */
     }
 }
